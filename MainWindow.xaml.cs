@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Pr3
 {
@@ -21,11 +22,25 @@ namespace Pr3
     public partial class MainWindow : Window
     {
         public Classes.PersonInfo Player = new Classes.PersonInfo("Geralt", 100, 10, 1, 0, 0, 5);
+        public List<Classes.PersonInfo> Enemys = new List<Classes.PersonInfo>();
+        DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
         public MainWindow()
         {
             InitializeComponent();
             UserInfoPlayer();
+            Enemys.Add(new Classes.PersonInfo("Эредин", 100, 20, 1, 15, 5, 20));
+            Enemys.Add(new Classes.PersonInfo("Гуль", 20, 5, 1, 5, 2, 5));
+            Enemys.Add(new Classes.PersonInfo("Гюнтер о Дим", 50, 3, 1, 10, 10, 15));
+
+            dispatcherTimer.Tick += AttackPlayer;
+            dispatcherTimer.Interval = new System.TimeSpan(0, 0, 10);
+            dispatcherTimer.Start();
+        }
+
+        private void AttackPlayer(object sender, EventArgs e)
+        {
+
         }
 
         public void UserInfoPlayer()
