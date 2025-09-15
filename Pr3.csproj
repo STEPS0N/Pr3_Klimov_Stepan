@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -93,6 +94,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="main-witcher.vuttak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\08a22d63870e42089ad6c502823bb981.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eredin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main-witcher.vuttak.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Witcher_3_Wild_Hunt_Eredin_The_Witcher-1213831.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ГульВ3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
